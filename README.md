@@ -15,10 +15,10 @@ on [Netlify][Netlify-url].
 
 #### Project demo
 <a href="https://tigris-todo-starter.netlify.app/">
-    <img src="public/readme/todo_app_screenshot.jpg" alt="Todo web app">
+    <img src="public/readme/todo_app_screenshot.jpg" alt="Todo web app filled with a few tasks with some of the incomplete">
 </a>
 
-https://tigris-todo-starter.netlify.app/
+You can see the demo live at https://tigris-todo-starter.netlify.app/
 
 # ⚙️ Deploying the app
 You have two options to run this Next.js app:
@@ -31,7 +31,7 @@ You have two options to run this Next.js app:
 
 ### Instructions
 1. Login to [Tigris console](https://console.preview.tigrisdata.cloud/) and [follow the video instruction](https://docs.tigrisdata.com/auth/)
-   to register a new application. In the next step, we will use the generated `Client ID` and `Client Secret`
+   to register a new application under `My Settings > Application Keys`. In the next step, we will use the generated `Client ID` and `Client Secret`
    as [Environment Variables](.env.example) when deploying our Next.js app on Netlify.
 2. Hit "Deploy" and follow instructions to fork this repo and deploy app to your Netlify account
 
@@ -61,7 +61,13 @@ git clone https://github.com/tigrisdata/tigris-netlify-starter
 cd tigris-netlify-starter
 npm install
 ```
-3. Run the Next.js server
+3. Add the environment variables into a file `.env.development.local`
+```
+TIGRIS_URI="api.preview.tigrisdata.cloud"
+TIGRIS_CLIENT_ID="your client id"
+TIGRIS_CLIENT_SECRET="your client secret"
+```
+4. Run the Next.js server
 ```shell
 npm run dev
 ```
